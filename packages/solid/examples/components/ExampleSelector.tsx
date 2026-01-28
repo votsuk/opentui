@@ -18,6 +18,7 @@ import TextStyleScene from "./text-style-demo.tsx"
 import { TextareaDemo } from "./textarea-demo.tsx"
 import { TextareaMinimalDemo } from "./textarea-minimal-demo.tsx"
 import { TextTruncationDemo } from "./text-truncation-demo.tsx"
+import { TableDemo } from "./table-demo.tsx"
 
 const EXAMPLES = [
   {
@@ -109,6 +110,11 @@ const EXAMPLES = [
     name: "Session Scrollbox",
     description: "Live message stream with chunked arrival simulation",
     scene: "session-scrollbox",
+  },
+  {
+    name: "Table Demo",
+    description: "Table component with borders, separators, colors, and alignment",
+    scene: "table-demo",
   },
 ]
 
@@ -214,6 +220,9 @@ const ExampleSelector = () => {
       </Match>
       <Match when={selectedScene() === "session-scrollbox"}>
         <Session />
+      </Match>
+      <Match when={selectedScene() === "table-demo"}>
+        <TableDemo />
       </Match>
       <Match when={selected() === -1}>
         <box style={{ height: terminalDimensions().height, backgroundColor: "#001122", padding: 1 }}>
