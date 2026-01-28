@@ -19,6 +19,16 @@ import {
   type SelectRenderableOptions,
   type TabSelectRenderableOptions,
   type FrameBufferOptions,
+  TableRenderable,
+  TableHeadRenderable,
+  TableBodyRenderable,
+  TableRowRenderable,
+  TableHeaderCellRenderable,
+  TableDataCellRenderable,
+  type TableOptions,
+  type TableSectionOptions,
+  type TableRowOptions,
+  type TableCellOptions,
 } from "../"
 import { TextNodeRenderable, type TextNodeOptions } from "../TextNode"
 import { h, type VChild } from "./vnode"
@@ -55,6 +65,30 @@ export function TabSelect(props?: TabSelectRenderableOptions, ...children: VChil
 
 export function FrameBuffer(props: FrameBufferOptions, ...children: VChild[]) {
   return h(FrameBufferRenderable, props, ...children)
+}
+
+export function Table(props?: TableOptions, ...children: VChild[]) {
+  return h(TableRenderable, props || {}, ...children)
+}
+
+export function THead(props?: TableSectionOptions, ...children: VChild[]) {
+  return h(TableHeadRenderable, props || {}, ...children)
+}
+
+export function TBody(props?: TableSectionOptions, ...children: VChild[]) {
+  return h(TableBodyRenderable, props || {}, ...children)
+}
+
+export function TR(props?: TableRowOptions, ...children: VChild[]) {
+  return h(TableRowRenderable, props || {}, ...children)
+}
+
+export function TH(props?: TableCellOptions, ...children: VChild[]) {
+  return h(TableHeaderCellRenderable, props || {}, ...children)
+}
+
+export function TD(props?: TableCellOptions, ...children: VChild[]) {
+  return h(TableDataCellRenderable, props || {}, ...children)
 }
 
 export function Code(props: CodeOptions, ...children: VChild[]) {

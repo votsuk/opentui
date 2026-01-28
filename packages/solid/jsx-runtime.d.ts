@@ -12,6 +12,12 @@ import type {
   SelectProps,
   SpanProps,
   TabSelectProps,
+  TableProps,
+  TableHeadProps,
+  TableBodyProps,
+  TableRowProps,
+  TableHeaderCellProps,
+  TableDataCellProps,
   TextareaProps,
   TextProps,
 } from "./src/types/elements"
@@ -35,6 +41,12 @@ declare namespace JSX {
     code: CodeProps
     textarea: TextareaProps
     markdown: MarkdownProps
+    table: TableProps
+    thead: TableHeadProps
+    tbody: TableBodyProps
+    tr: TableRowProps
+    th: TableHeaderCellProps
+    td: TableDataCellProps
 
     b: SpanProps
     strong: SpanProps

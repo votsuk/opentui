@@ -15,6 +15,12 @@ import type {
   SelectProps,
   SpanProps,
   TabSelectProps,
+  TableProps,
+  TableHeadProps,
+  TableBodyProps,
+  TableRowProps,
+  TableHeaderCellProps,
+  TableDataCellProps,
   TextareaProps,
   TextProps,
 } from "./src/types/components"
@@ -47,6 +53,12 @@ export namespace JSX {
     textarea: TextareaProps
     select: SelectProps
     scrollbox: ScrollBoxProps
+    table: TableProps
+    thead: TableHeadProps
+    tbody: TableBodyProps
+    tr: TableRowProps
+    th: TableHeaderCellProps
+    td: TableDataCellProps
     "ascii-font": AsciiFontProps
     "tab-select": TabSelectProps
     "line-number": LineNumberProps

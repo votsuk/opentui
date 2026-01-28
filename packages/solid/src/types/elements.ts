@@ -21,6 +21,16 @@ import type {
   TabSelectOption,
   TabSelectRenderable,
   TabSelectRenderableOptions,
+  TableRenderable,
+  TableHeadRenderable,
+  TableBodyRenderable,
+  TableRowRenderable,
+  TableHeaderCellRenderable,
+  TableDataCellRenderable,
+  TableOptions,
+  TableSectionOptions,
+  TableRowOptions,
+  TableCellOptions,
   TextareaOptions,
   TextareaRenderable,
   TextNodeRenderable,
@@ -159,6 +169,18 @@ export type ScrollBoxProps = ComponentProps<ContainerProps<ScrollBoxOptions>, Sc
 export type CodeProps = ComponentProps<CodeOptions, CodeRenderable>
 
 export type MarkdownProps = ComponentProps<MarkdownOptions, MarkdownRenderable>
+
+export type TableProps = ComponentProps<ContainerProps<TableOptions>, TableRenderable>
+
+export type TableHeadProps = ComponentProps<ContainerProps<TableSectionOptions>, TableHeadRenderable>
+
+export type TableBodyProps = ComponentProps<ContainerProps<TableSectionOptions>, TableBodyRenderable>
+
+export type TableRowProps = ComponentProps<ContainerProps<TableRowOptions>, TableRowRenderable>
+
+export type TableHeaderCellProps = ComponentProps<ContainerProps<TableCellOptions>, TableHeaderCellRenderable>
+
+export type TableDataCellProps = ComponentProps<ContainerProps<TableCellOptions>, TableDataCellRenderable>
 
 // ============================================================================
 // Extended/Dynamic Component System
